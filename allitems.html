@@ -87,10 +87,16 @@
 						</head>
 						<body>
 
-						<form class="example" action="/action_page.php">
-  							<input type="text" placeholder="Search.." name="search">
+						<form id="frmSearch" class="example" action="/action_page.php">
+  							<input id="txtSearch" type="text" placeholder="Search.." name="search">
   							<button type="submit"><i class="fa fa-search"></i></button>
 						</form>
+						<script type="text/javascript">
+    							document.getElementById('frmSearch').onsubmit = function() {
+        							window.location = 'http://www.google.com/search?q=site:yoursitename.com ' + document.getElementById('txtSearch').value;
+        							return false;
+    							}
+						</script>
 					</div>
 				</section>
 
